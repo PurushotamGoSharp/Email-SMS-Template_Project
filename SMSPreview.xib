@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailView">
+            <connections>
+                <outlet property="smsDescriptionLabel" destination="kY1-33-0sg" id="hQU-WG-ZD0"/>
+                <outlet property="smsHeaderLabel" destination="sjY-vK-VxH" id="7W1-hJ-JSM"/>
+                <outlet property="smsHeaderView" destination="PAs-Ey-rbQ" id="C8k-zY-BKt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="DetailView">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="261"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAs-Ey-rbQ">
+                    <rect key="frame" x="0.0" y="0.0" width="331" height="54"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYa-jX-9MT">
+                            <rect key="frame" x="294" y="15" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="Yu4-MD-RLJ"/>
+                                <constraint firstAttribute="width" constant="24" id="mwt-2B-w8h"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="Icon-Close"/>
+                            <connections>
+                                <action selector="smsCloseButton:" destination="-1" eventType="touchUpInside" id="FFQ-Ro-YPo"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjY-vK-VxH">
+                            <rect key="frame" x="142" y="16" width="47" height="23"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.48653052870000002" green="0.71406279250000004" blue="0.81282051280000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="EYa-jX-9MT" firstAttribute="centerY" secondItem="PAs-Ey-rbQ" secondAttribute="centerY" id="Ldb-MX-WOg"/>
+                        <constraint firstItem="sjY-vK-VxH" firstAttribute="centerY" secondItem="PAs-Ey-rbQ" secondAttribute="centerY" id="a67-ki-LXL"/>
+                        <constraint firstAttribute="trailing" secondItem="EYa-jX-9MT" secondAttribute="trailing" constant="13" id="ePi-dn-Nlv"/>
+                        <constraint firstItem="sjY-vK-VxH" firstAttribute="centerX" secondItem="PAs-Ey-rbQ" secondAttribute="centerX" id="j6K-JC-21L"/>
+                        <constraint firstAttribute="height" constant="54" id="mlO-D9-eVE"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY1-33-0sg">
+                    <rect key="frame" x="15" y="74" width="38" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="PAs-Ey-rbQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9Rz-0G-AsN"/>
+                <constraint firstItem="kY1-33-0sg" firstAttribute="top" secondItem="PAs-Ey-rbQ" secondAttribute="bottom" constant="20" id="D8O-kh-JAi"/>
+                <constraint firstItem="PAs-Ey-rbQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Y2w-F6-rzj"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kY1-33-0sg" secondAttribute="trailing" constant="10" id="qew-XM-N6s"/>
+                <constraint firstAttribute="trailing" secondItem="PAs-Ey-rbQ" secondAttribute="trailing" id="vFu-OP-ej7"/>
+                <constraint firstItem="kY1-33-0sg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="vSl-a3-rJz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="519.5" y="250.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Icon-Close" width="16" height="16"/>
+    </resources>
+</document>
